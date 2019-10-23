@@ -1,0 +1,26 @@
+# /etc/conf.d/csrd: config file for /etc/init.d/csrd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/congstar-coin/csr.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/csrd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/csrd.pid"
+
+# Where to write csrd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/csrd"
+
+# User and group to own csrd process
+#BITCOIND_USER="csr"
+#BITCOIND_GROUP="csr"
+
+# Path to csrd executable
+#BITCOIND_BIN="/usr/bin/csrd"
+
+# Nice value to run csrd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

@@ -1,0 +1,26 @@
+[Unit]
+Description=Congstar's distributed currency daemon
+After=network.target
+
+[Service]
+User=csr
+Group=csr
+
+Type=forking
+PIDFile=/var/lib/csrd/csrd.pid
+
+ExecStart=/usr/bin/csrd -daemon -pid=/var/lib/csrd/csrd.pid \
+          -conf=/etc/congstar-coin/csr.conf -datadir=/var/lib/csrd
+
+ExecStop=-/usr/bin/csr-cli -conf=/etc/congstar-coin/csr.conf \
+         -datadir=/var/lib/csrd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

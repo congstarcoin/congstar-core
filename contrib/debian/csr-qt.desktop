@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Congstar
+Comment=Congstar P2P Cryptocurrency
+Comment[fr]=Congstar, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Congstar, eşten eşe kriptografik sanal para birimi
+Exec=csr-qt %u
+Terminal=false
+Type=Application
+Icon=csr128
+MimeType=x-scheme-handler/csr;
+Categories=Office;Finance;
